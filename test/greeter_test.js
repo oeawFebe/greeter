@@ -43,7 +43,7 @@ contract("Greeter: update greeting",(accounts)=>{
                 try {
                     await greeter.setGreeting("Not the owner",{from: accounts[1]});
                 } catch (err) {
-                    const errorMessage="Ownable:caller is not the owner";
+                    const errorMessage="Ownable: caller is not the owner";
                     assert.equal(err.reason,errorMessage,"greeting should not update");
                     return;
                 }
